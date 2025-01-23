@@ -6,7 +6,7 @@ const OurMission = () => {
     return (
         <section className="our-mission py-16 px-6">
             <div className="container mx-auto text-center max-w-5xl">
-                {/* Sección de encabezado */}
+                {/* Header Section */}
                 <div className="mb-8">
                     <h2 className="text-xl text-[#73B9EB] mb-2">Our Mission</h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white">
@@ -14,23 +14,23 @@ const OurMission = () => {
                     </h3>
                 </div>
 
-                {/* Texto descriptivo */}
+                {/* Descriptive Text */}
                 <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                     By using blockchain’s transparency and efficiency, we connect volunteers with organizations, fostering collaboration and impactful experiences in a secure and scalable ecosystem.
                 </p>
 
-                {/* Contenedor con fondo y bordes redondeados */}
+                {/* Container with background and rounded borders */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8 bg-[#0F112B] rounded-[30px] p-8">
-                    {/* Imagen */}
+                    {/* Image */}
                     <div className="relative overflow-hidden w-full md:w-1/2 max-w-md">
                         <img
-                            src="/our_mission.png"
+                            src="/ourMission.png"
                             alt="Illustration of volunteers"
                             className="object-cover object-top w-full h-auto rounded-lg shadow-lg"
                         />
                     </div>
 
-                    {/* Lista de puntos destacados */}
+                    {/* Highlighted Points List */}
                     <ul className="text-left text-gray-300 space-y-12 md:w-1/2">
                         <li className="flex items-start gap-4">
                             <div className="bg-[#73B9EB] p-2 rounded-full">
