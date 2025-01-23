@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import { useState } from "react";
@@ -8,11 +9,10 @@ export default function Home() {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-4 lg:p-30 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1>VolunChain</h1>
-
-      {/* Exmaple Components */}
-      <div className="flex flex-col gap-5 w-2/3 justify-center">
+      //Example Components
+      {/*  <div className="flex flex-col gap-5 w-2/3 justify-center">
         <div className="flex gap-3 w-2/5 justify-center">
           <Button
             type="button"
@@ -42,7 +42,8 @@ export default function Home() {
             name="email"
           />
         </div>
-      </div>
+      </div> */}
+      <Footer />
     </div>
   );
 }
