@@ -16,7 +16,7 @@ module.exports = {
           DEFAULT: '#071117',
         },
         background: {
-          primary: '#0F172A',   // slate-950
+          primary: '#070b1f',   // slate-950
           secondary: '#1E293B', // slate-800
           light: '#F8FAFC',     // slate-50
         },
