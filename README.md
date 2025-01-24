@@ -1,4 +1,4 @@
-## VolunChain  
+# VolunChain  
 **Innovating Volunteerism with Blockchain 🚀**  
 
 VolunChain is a revolutionary blockchain-based platform designed to connect volunteers with organizations transparently, decentralized, and efficiently. Our mission is to transform volunteering into a more accessible, secure, and rewarding experience for everyone involved.
@@ -56,8 +56,8 @@ npm install
 
 ## Maintainers 👥  
 - **Kevin Latino** 
-- **Kevin Latino** 
-- **Frankic Power**  
+- **Joel Vargas** 
+- **Frankie Power**  
 
 ---
 
