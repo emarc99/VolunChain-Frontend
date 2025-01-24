@@ -11,8 +11,8 @@ interface ButtonProps {
 const Button = ({
   children,
   onClick,
-  variant = "primary",
-  textColor = "white",
+  variant,
+  textColor,
   type = "button",
 }: ButtonProps) => {
   return (
