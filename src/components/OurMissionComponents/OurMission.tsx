@@ -4,7 +4,7 @@ const OurMission = () => {
     return (
         <section className="content-section py-16 px-6">
             <div className="container mx-auto text-center max-w-5xl">
-                {/* Header Section */}
+
                 <div className="mb-8">
                     <h2 className="text-xl text-[#73B9EB] mb-2">Our Mission</h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white">
@@ -12,14 +12,12 @@ const OurMission = () => {
                     </h3>
                 </div>
 
-                {/* Descriptive Text */}
                 <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                     By using blockchain’s transparency and efficiency, we connect volunteers with organizations, fostering collaboration and impactful experiences in a secure and scalable ecosystem.
                 </p>
 
-                {/* Container with background and rounded borders */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8 bg-[#0F112B] rounded-[30px] p-8">
-                    {/* Image */}
+
                     <div className="relative overflow-hidden w-full md:w-1/2 max-w-md">
                         <Image
                             src="/ourMission.png"
@@ -30,7 +28,6 @@ const OurMission = () => {
                         />
                     </div>
 
-                    {/* Highlighted Points List */}
                     <ul className="text-left text-gray-300 space-y-12 md:w-1/2">
                         <li className="flex items-start gap-4">
                             <div className="bg-[#73B9EB] p-2 rounded-full">
