@@ -83,14 +83,14 @@ const OpportunitiesHeader = () => {
         </div>
       </div>
 
-      <div className="my-12 relative flex gap-8 items-center w-[95%] mx-auto">
+      <div className="my-12 relative flex gap-8 items-center w-full mx-auto">
         <ChevronLeftCircle
           onClick={() => handleSlide("left")}
           strokeWidth={1}
           className="w-[50px] lg:w-[80px] h-[50px] lg:h-[80px] rounded-full text-[#73B9EB] absolute left-0 z-10"
         />
 
-<div className="flex items-center justify-center gap-[24px] overflow-hidden mx-auto w-full py-[10px]">
+<div className="flex items-center justify-center gap-[10px] overflow-hidden mx-auto w-full py-[10px]">
      {categories
        .slice(activeIndex, activeIndex + visibleButtons)
        .map((category, index) => (
