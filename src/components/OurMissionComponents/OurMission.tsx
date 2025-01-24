@@ -1,10 +1,8 @@
-// src/components/ui/OurMission.tsx
-
-import React from 'react';
+import Image from "next/image"; 
 
 const OurMission = () => {
     return (
-        <section className="our-mission py-16 px-6">
+        <section className="content-section py-16 px-6">
             <div className="container mx-auto text-center max-w-5xl">
                 {/* Header Section */}
                 <div className="mb-8">
@@ -23,9 +21,11 @@ const OurMission = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8 bg-[#0F112B] rounded-[30px] p-8">
                     {/* Image */}
                     <div className="relative overflow-hidden w-full md:w-1/2 max-w-md">
-                        <img
+                        <Image
                             src="/ourMission.png"
                             alt="Illustration of volunteers"
+                            width={500} 
+                            height={500} 
                             className="object-cover object-top w-full h-auto rounded-lg shadow-lg"
                         />
                     </div>
@@ -50,7 +50,7 @@ const OurMission = () => {
                                 </svg>
                             </div>
 
-                            <p >We bridge the gap between individuals and organizations.</p>
+                            <p>We bridge the gap between individuals and organizations.</p>
                         </li>
                         <li className="flex items-start gap-4">
                             <div className="bg-[#73B9EB] p-2 rounded-full">
@@ -70,7 +70,7 @@ const OurMission = () => {
                                 </svg>
                             </div>
 
-                            <p >
+                            <p>
                                 Motivating engagement rewarding volunteers with innovative incentives like NFT collectibles to recognize and inspire their contributions.
                             </p>
                         </li>
@@ -92,7 +92,7 @@ const OurMission = () => {
                                 </svg>
                             </div>
 
-                            <p >
+                            <p>
                                 Create an impact developing a scalable, community-driven platform where volunteering is accessible and rewarding for everyone.
                             </p>
                         </li>
