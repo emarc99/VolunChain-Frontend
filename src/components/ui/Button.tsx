@@ -6,6 +6,7 @@ interface ButtonProps {
   variant: "primary" | "secondary";
   type: "button" | "submit" | "reset";
   textColor?: "white" | "black" | "primary" | "secondary";
+  className?: string 
 }
 
 const Button = ({
@@ -14,11 +15,12 @@ const Button = ({
   variant = "primary",
   textColor = "white",
   type = "button",
+  className
 }: ButtonProps) => {
   return (
     <button
       type={type}
-      className={clsx("cursor-pointer py-3 px-6 rounded-full w-auto font-semibold border-2", {
+      className={clsx("cursor-pointer py-3 px-6 rounded-full w-auto font-semibold border-2", className, {
         
         "text-white": textColor === "white",
         "text-black": textColor === "black",
