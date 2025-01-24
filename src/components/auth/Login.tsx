@@ -12,7 +12,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0A061E] p-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 bg-[#151127] rounded-[20px] overflow-hidden max-w-4xl w-full mx-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 bg-[#151127] rounded-tr-[20px] rounded-br-[20px] overflow-hidden max-w-4xl w-full mx-4">
         <div className="relative hidden md:block bg-[#181934] p-10">
           <div className="absolute top-10 left-10">
             <div className="flex items-center gap-4">
@@ -48,7 +48,7 @@ export default function Login() {
             </Link>
           </p>
 
-          <button className="w-full mb-10 flex items-center justify-center gap-4 bg-transparent border border-[#73b9eb] text-[#73b9eb] rounded-full py-3 hover:bg-[#73b9eb]/10 transition-colors">
+          <button className="w-full mb-10 flex items-center justify-center gap-4 bg-transparent border border-[#73b9eb] text-[#73b9eb] rounded-full py-3 hover:bg-[#73b9eb]/10 transition-colors text-sm">
             <span>Sign in with Google</span>
             <svg
               width="20"
