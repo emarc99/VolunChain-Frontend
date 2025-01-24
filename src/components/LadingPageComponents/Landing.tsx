@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 function Landing() {
   return (
     <>
-      <div className="w-full flex justify-center pt-4 px-4 sm:px-6 md:px-8">
+      <div className="w-full flex justify-center py-4 px-4 sm:px-6 md:px-8">
         <button className="group flex items-center gap-2 px-4 sm:px-6 py-2 rounded-full border-2 border-secondary bg-background-primary hover:border-secondary/50 transition-colors text-sm sm:text-base">
           <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs rounded-full bg-secondary text-tertiary whitespace-nowrap">
             New
@@ -16,10 +16,10 @@ function Landing() {
       </div>
       <main className="flex flex-col justify-center items-center text-center px-4 md:px-6 lg:px-8">
         <div className="w-full max-w-[1076px] mx-auto">
-          <h2 className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold mb-4 md:mb-6 bg-clip-text text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 bg-clip-text text-white leading-tight max-w-[800px] mx-auto">
             VolunChain: Transforming Volunteering, One Block at a Time
           </h2>
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] text-text-muted mb-6 md:mb-8 text-white max-w-[850px] mx-auto">
+          <p className="text-lg text-text-muted mb-6 text-white max-w-[650px] mx-auto">
             Organizations post volunteer opportunities, and users join projects they love.
             Earn unique NFTs as proof of your impact!
           </p>
@@ -29,9 +29,9 @@ function Landing() {
           </div>
         </div>
       </main>
-      <div className="w-full relative mt-8 sm:mt-12 md:mt-16">
+      <div className="w-full relative mt-8">
         <div className="absolute left-0 right-0 h-full bg-gradient-to-b from-transparent from-0% via-[#070B1F40] via-50% to-[#070B1F] to-90% z-10" />
-        <div className="flex justify-center">
+        <div className="flex justify-center max-w-screen-lg mx-auto">
           <Image
             src="/assets/landing.png"
             alt="Volunteers illustration"
