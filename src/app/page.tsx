@@ -28,7 +28,7 @@ export default function Home() {
 
           {/* Contenido */}
           <div className="mb-4">
-            <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            <p className="text-white">Lore ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
               molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
               numquam blanditiis harum quisquam eius sed odit fugiat iusto.</p>
           </div>
