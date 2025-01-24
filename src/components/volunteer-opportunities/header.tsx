@@ -51,13 +51,13 @@ const OpportunitiesHeader = () => {
  
 
   return (
-    <div className="w-full min-h-screen h-fit px-[20px] md:px-[60px] py-[25px] md:py-[80px] bg-transparent max-w-7xl mx-auto">
-      <div className="w-full h-fit lg:h-[428px] rounded-[37px] bg-[#0F112B] flex flex-col lg:flex-row py-[30px] lg:py-[60px] px-[40px] lg:px-[80px] gap-[10px]">
+    <div className="w-full min-h-screen h-fit px-[10px] md:px-[30px] py-[25px] md:py-[80px] bg-transparent max-w-7xl mx-auto">
+      <div className="w-full h-fit lg:h-[328px] rounded-[37px] bg-[#0F112B] flex flex-col lg:flex-row py-[20px] lg:py-[30px] px-[30px] lg:px-[45px] gap-[10px]">
         <div className="flex flex-col items-start justify-center w-full lg:w-1/2 h-fit gap-[25px] lg:gap-[50px]">
-          <h1 className="text-white text-[28px] sm:text-[32px] lg:text-[48px] font-[800]">
+          <h1 className="text-white text-[28px] sm:text-[32px] lg:text-[38px] font-[800]">
             Where would you like to help today?
           </h1>
-          <div className="flex relative w-full lg:w-2/3 h-[84px]">
+          <div className="flex relative w-full lg:w-2/3 h-[54px]">
             <Input
               type="text"
               placeholder="Search volunteering options"
@@ -66,7 +66,7 @@ const OpportunitiesHeader = () => {
               onChange={(e) => handleSearch(e)}
               classname="w-full h-full text-white text-opacity-50 text-[24px] font-[700]"
             />
-            <div className="md:w-[53px] w-[45px] h-[45px] md:h-[53px] rounded-[5px] bg-[#73B9EB] absolute right-4 top-4 flex items-center justify-center">
+            <div className="w-[40px] h-[40px] rounded-[5px] bg-[#73B9EB] absolute right-2 top-2 flex items-center justify-center">
               <Search color="black" />
             </div>
           </div>
@@ -87,7 +87,7 @@ const OpportunitiesHeader = () => {
         <ChevronLeftCircle
           onClick={() => handleSlide("left")}
           strokeWidth={1}
-          className="w-[50px] lg:w-[100px] h-[50px] lg:h-[100px] rounded-full text-[#73B9EB] absolute left-0 z-10"
+          className="w-[50px] lg:w-[80px] h-[50px] lg:h-[80px] rounded-full text-[#73B9EB] absolute left-0 z-10"
         />
 
 <div className="flex items-center justify-center gap-[24px] overflow-hidden mx-auto w-full py-[10px]">
@@ -108,7 +108,7 @@ const OpportunitiesHeader = () => {
         <ChevronRightCircle
           strokeWidth={1}
           onClick={() => handleSlide("right")}
-          className="w-[50px] lg:w-[100px] h-[50px] lg:h-[100px] rounded-full text-[#73B9EB] absolute right-4 z-10"
+          className="w-[50px] lg:w-[80px] h-[50px] lg:h-[80px] rounded-full text-[#73B9EB] absolute right-4 z-10"
         />
       </div>
     </div>
