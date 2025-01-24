@@ -13,7 +13,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0A061E] p-8">
       <div className="grid grid-cols-1 md:grid-cols-2 bg-[#151127] rounded-[20px] overflow-hidden max-w-4xl w-full mx-4">
-        <div className="relative hidden md:block p-10">
+        <div className="relative hidden md:block bg-[#181934] p-10">
           <div className="absolute top-10 left-10">
             <div className="flex items-center gap-4">
               <Image
@@ -34,7 +34,7 @@ export default function Login() {
           />
         </div>
 
-        <div className="p-10 md:p-16">
+        <div className="p-10 md:p-16 bg-[#0F112B]">
           <p className="text-[#7C88B1] text-sm mb-4">Welcome back</p>
 
           <h1 className="text-white text-3xl font-bold mb-4">
