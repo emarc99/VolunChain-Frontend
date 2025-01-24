@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const OurMission = () => {
     return (
-        <section className="content-section py-16 px-6">
+        <section className="py-16 px-6">
             <div className="container mx-auto text-center max-w-5xl">
 
                 <div className="mb-8">

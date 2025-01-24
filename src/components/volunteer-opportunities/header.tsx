@@ -64,7 +64,7 @@ const OpportunitiesHeader = () => {
               value={search}
               name="options"
               onChange={(e) => handleSearch(e)}
-              classname="w-full h-full text-white text-opacity-50 text-[24px] font-[700]"
+              className="w-full h-full text-white text-opacity-50 text-[24px] font-[700]"
             />
             <div className="w-[40px] h-[40px] rounded-[5px] bg-[#73B9EB] absolute right-2 top-2 flex items-center justify-center">
               <Search color="black" />
