@@ -1,11 +1,11 @@
 interface InputProps {
-  type: string;
-  placeholder: string;
+  type?: string;
+  placeholder?: string;
   label?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  name: string;
-  classname: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  name?: string;
+  className?: string;
 }
 
 const Input = ({
@@ -15,10 +15,10 @@ const Input = ({
   value,
   onChange,
   name,
-  classname,
+  className,
 }: InputProps) => {
   return (
-    <div className={`flex flex-col mb-4 ${classname}`}>
+    <div className={`flex flex-col mb-4 ${className}`}>
       {label && (
         <label htmlFor={name} className="mb-2 text-sm font-bold text-white">
           {label}
