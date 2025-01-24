@@ -35,10 +35,10 @@ const StartSection = (props: Props) => {
                     <div className="grid grid-cols-2 gap-4 lg:gap-8">
                         {stats.map((stat, index) => (
                             <div key={index} className="text-center bg-[#0F112B] p-6 py-12 sm:p-10 sm:py-16 rounded-lg">
-                                <p className="text-[2em] md:text-[2.5em] capitalize font-semibold">
+                                <p className="text-[2em] font-kantumruy md:text-[2.5em] capitalize font-semibold">
                                     {stat.value}<span className="text-blue">+</span>
                                 </p>
-                                <p className="text-sm sm:text-base">{stat.label}</p>
+                                <p className="text-sm font-kantumruy sm:text-base">{stat.label}</p>
                             </div>
                         ))}
                     </div>
