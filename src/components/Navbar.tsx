@@ -1,57 +1,61 @@
-import Image from "next/image";
-import { Search, BellRing, HandCoins, WalletCards, Home } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Button from "./ui/Button";
+import { HamIcon, Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => setIsMenuOpen((prevState) => !prevState);
+
   return (
-    <nav className="w-full flex items-center justify-between">
+    <nav className="w-full flex items-center justify-between pt-8 lg:p-4 ">
       <Link href="/" className="text-white text-2xl font-semibold">
-        <div className="w-[226px] h-[113px]">
+        <div className="w-40 h-40 lg:w-[226px] lg:h-[113px]">
           <img src="/logo.svg" className="w-full h-full" alt="logo" />
         </div>
       </Link>
 
-      <button
-        aria-label="Toggle Navigation Menu"
-        onClick={toggleMenu}
-        className="lg:hidden text-white"
-      >
-        {isMenuOpen ? "Close" : "Menu"}
-      </button>
+      <div className="lg:hidden text-white">
+        <Menu onClick={toggleMenu} />
+      </div>
 
       <div
-        className={`lg:flex items-center space-x-6 ${
-          isMenuOpen ? "block" : "hidden"
-        } lg:block`}
+        className={`lg:flex items-center space-x-6 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? "block absolute top-20 left-0 w-full  py-4" : "hidden"
+        } lg:block lg:static lg:w-auto lg:space-x-6`}
       >
-        <div className="flex items-center gap-x-7">
+        <div className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-7">
           <Link href="/" className="">
-            <p className="text-white text-lg font-semibold ">Home</p>
+            <p className="text-white text-lg font-semibold">Home</p>
           </Link>
 
           <Link href="/" className="">
-            <p className="text-white text-lg font-semibold ">Our Mission</p>
+            <p className="text-white text-lg font-semibold">Our Mission</p>
           </Link>
 
           <Link href="/" className="">
-            <p className="text-white text-lg font-semibold ">Users</p>
+            <p className="text-white text-lg font-semibold">Users</p>
           </Link>
 
           <Link href="/" className="">
-            <p className="text-white text-lg font-semibold ">Social Media</p>
+            <p className="text-white text-lg font-semibold">Social Media</p>
           </Link>
         </div>
 
-        <div className="flex space-x-4">
-          <Button variant="secondary"  className="border-2 border-[#73B9EB] text-[#73B9EB]"  type={"button"}>
+        <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 px-5 lg:px-0">
+          <Button
+            variant="secondary"
+            className="border-2 border-[#73B9EB] text-[#73B9EB]"
+            type="button"
+          >
             Contact us
           </Button>
-          <Button variant="primary" className="bg-[#EF565D] border border-[#EF565D]" textColor="black" type={"button"}>
+          <Button
+            variant="primary"
+            className="bg-[#EF565D] border border-[#EF565D] text-black"
+            type="button"
+          >
             Log in
           </Button>
         </div>
