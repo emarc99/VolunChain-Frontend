@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${fustat.variable}`}
     >
-      <body className="flex flex-col justify-center min-h-screen bg-background-primary text-text-light overflow-x-hidden">{children}</body>
+      <body className="flex flex-col justify-center min-h-screen text-text-light overflow-x-hidden">{children}</body>
     </html>
   );
 }
