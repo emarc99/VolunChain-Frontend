@@ -1,22 +1,38 @@
-import * as React from "react"
+interface InputProps {
+  type: string;
+  placeholder: string;
+  label?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  name: string;
+}
 
-import { cn } from "@/lib/utils"
-
-const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
-  ({ className, type, ...props }, ref) => {
-    return (
+const Input = ({
+  type,
+  placeholder,
+  label,
+  value,
+  onChange,
+  name,
+}: InputProps) => {
+  return (
+    <div className="flex flex-col mb-4">
+      {label && (
+        <label htmlFor={name} className="mb-2 text-sm font-bold text-white">
+          {label}
+        </label>
+      )}
       <input
         type={type}
-        className={cn(
-          "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-          className
-        )}
-        ref={ref}
-        {...props}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        id={name}
+        name={name}
+        className="p-2 text-sm border rounded-md bg-transparent text-white border-[#73b9eb] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"
       />
-    )
-  }
-)
-Input.displayName = "Input"
+    </div>
+  );
+};
 
-export { Input }
+export default Input;
