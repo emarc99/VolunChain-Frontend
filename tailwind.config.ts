@@ -13,6 +13,8 @@ export default {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
+        blue: "var(--blue)",
+        grey: "var(--grey)",
       },
     },
   },
