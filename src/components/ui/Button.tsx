@@ -1,5 +1,3 @@
-"use client";
-
 import clsx from "clsx";
 
 interface ButtonProps {
@@ -29,10 +27,6 @@ const Button = ({
           "text-black": textColor === "black",
           "text-primary": textColor === "primary",
           "text-secondary": textColor === "secondary",
-          "bg-primary ": variant === "primary",
-          "border-primary": variant === "primary",
-          "border-2 border-secondary": variant === "secondary",
-        }
         },
         {
           "bg-primary border-primary": variant === "primary",
