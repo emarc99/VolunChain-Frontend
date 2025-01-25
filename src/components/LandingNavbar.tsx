@@ -3,10 +3,17 @@ import Link from "next/link";
 import Button from "./ui/Button";
 import { HamIcon, Menu } from "lucide-react";
 
-const Navbar = () => {
+const LandingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => setIsMenuOpen((prevState) => !prevState);
+
+  const menuItems = [
+    { path: "/", label: "Home" },
+    { path: "/mission", label: "Our Mission" },
+    { path: "/users", label: "Users" },
+    { path: "/social-media", label: "Social Media" },
+  ];
 
   return (
     <nav className="w-full flex items-center justify-between pt-8 lg:p-4 ">
@@ -26,34 +33,26 @@ const Navbar = () => {
         } lg:block lg:static lg:w-auto lg:space-x-6`}
       >
         <div className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-7">
-          <Link href="/" className="">
-            <p className="text-white text-lg font-semibold">Home</p>
-          </Link>
-
-          <Link href="/" className="">
-            <p className="text-white text-lg font-semibold">Our Mission</p>
-          </Link>
-
-          <Link href="/" className="">
-            <p className="text-white text-lg font-semibold">Users</p>
-          </Link>
-
-          <Link href="/" className="">
-            <p className="text-white text-lg font-semibold">Social Media</p>
-          </Link>
+          {menuItems.map((link) => (
+            <Link key={link.path} href={link.path}>
+              <p className="text-white text-lg font-semibold">{link.label}</p>
+            </Link>
+          ))}
         </div>
 
         <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 px-5 lg:px-0">
           <Button
             variant="secondary"
             className="border-2 border-[#73B9EB] text-[#73B9EB]"
+            textColor="secondary"
             type="button"
           >
             Contact us
           </Button>
           <Button
             variant="primary"
-            className="bg-[#EF565D] border border-[#EF565D] text-black"
+            className="bg-[#EF565D] border border-[#EF565D] text-[#73B9EB]"
+            textColor="secondary"
             type="button"
           >
             Log in
@@ -64,4 +63,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default LandingNavbar;
