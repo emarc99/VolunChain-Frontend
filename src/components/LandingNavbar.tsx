@@ -43,7 +43,7 @@ const LandingNavbar = () => {
         <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 px-5 lg:px-0">
           <Button
             variant="secondary"
-            className="border-2 border-[#73B9EB] text-[#73B9EB]"
+            className="border-2 border-secondary text-secondary"
             textColor="secondary"
             type="button"
           >
@@ -51,8 +51,8 @@ const LandingNavbar = () => {
           </Button>
           <Button
             variant="primary"
-            className="bg-[#EF565D] border border-[#EF565D] text-[#73B9EB]"
-            textColor="secondary"
+            className="bg-primary border border-primary "
+            textColor="black"
             type="button"
           >
             Log in

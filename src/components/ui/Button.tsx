@@ -4,7 +4,7 @@ interface ButtonProps {
   children: React.ReactNode | string;
   onClick?: () => void;
   variant: "primary" | "secondary";
-  type: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset";
   textColor?: "white" | "black" | "primary" | "secondary";
   className?: string 
 }
@@ -12,7 +12,7 @@ interface ButtonProps {
 const Button = ({
   children,
   onClick,
-  variant = "primary",
+  variant,
   textColor = "white",
   type = "button",
   className
