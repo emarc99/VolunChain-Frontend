@@ -11,16 +11,16 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#0A061E] p-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 bg-[#151127] rounded-tr-[20px] rounded-br-[20px] overflow-hidden max-w-4xl w-full mx-4">
-        <div className="relative hidden md:block bg-[#181934] p-10">
-          <div className="absolute top-10 left-10">
-            <div className="flex items-center gap-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#0A061E] p-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 bg-[#151127] rounded-[30px] overflow-hidden max-w-5xl w-full mx-6 shadow-lg">
+        <div className="relative hidden md:block bg-[#181934] p-16 rounded-tl-[30px] rounded-bl-[30px]">
+          <div className="absolute top-14 left-14">
+            <div className="flex items-center gap-6">
               <Image
                 src="/logo.svg"
                 alt="VolunChain Logo"
-                width={150}
-                height={150}
+                width={180}
+                height={180}
               />
             </div>
           </div>
@@ -28,31 +28,31 @@ export default function Login() {
           <Image
             src="/volunchain-illustration.png"
             alt="VolunChain Illustration"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             className="w-full h-full object-contain"
           />
         </div>
 
-        <div className="p-10 md:p-16 bg-[#0F112B]">
-          <p className="text-[#7C88B1] text-sm mb-4">Welcome back</p>
+        <div className="p-16 md:p-24 bg-[#0F112B] rounded-tr-[30px] rounded-br-[30px]">
+          <p className="text-[#7C88B1] text-lg mb-6">Welcome back</p>
 
-          <h1 className="text-white text-3xl font-bold mb-4">
+          <h1 className="text-white text-4xl font-bold mb-6">
             Sign In to VolunChain
           </h1>
 
-          <p className="text-[#7C88B1] text-sm mb-8">
+          <p className="text-[#7C88B1] text-lg mb-10">
             Don't have an account?{" "}
             <Link href="/register" className="text-[#4285f4] hover:underline">
               Register
             </Link>
           </p>
 
-          <button className="w-full mb-10 flex items-center justify-center gap-4 bg-transparent border border-[#73b9eb] text-[#73b9eb] rounded-full py-3 hover:bg-[#73b9eb]/10 transition-colors text-sm">
+          <button className="w-full mb-12 flex items-center justify-center gap-6 bg-transparent border border-[#73b9eb] text-[#73b9eb] rounded-full py-4 hover:bg-[#73b9eb]/10 transition-colors text-lg">
             <span>Sign in with Google</span>
             <svg
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ export default function Login() {
             </svg>
           </button>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
               <Input
                 type="email"
@@ -85,7 +85,7 @@ export default function Login() {
               />
             </div>
 
-            <button className="w-full flex items-center justify-center gap-4 bg-[#EF565D] text-white rounded-full py-3 hover:bg-[#EF565F]/90 transition-colors">
+            <button className="w-full flex items-center justify-center gap-6 bg-[#EF565D] text-white rounded-full py-4 hover:bg-[#EF565F]/90 transition-colors text-lg">
               Log In
             </button>
           </div>
