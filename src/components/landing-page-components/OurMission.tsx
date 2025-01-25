@@ -2,11 +2,10 @@ import Image from "next/image";
 
 const OurMission = () => {
     return (
-        <section className="py-16 px-6">
+        <section className="mt-16 py-16 px-6">
             <div className="container mx-auto text-center max-w-5xl">
-
                 <div className="mb-8">
-                    <h2 className="text-xl text-[#73B9EB] mb-2">Our Mission</h2>
+                    <h2 className="text-2xl text-[#73B9EB] mb-2">Our Mission</h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white">
                         Revolutionizing Volunteerism <br /> with Blockchain
                     </h3>
