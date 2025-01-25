@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Button from "../ui/Button";
+import LandingNavbar from "../LandingNavbar";
 
 function Landing() {
   return (
     <>
+    <LandingNavbar />
       <div className="w-full flex justify-center py-4 px-4 sm:px-6 md:px-8">
         <button className="group flex items-center gap-2 px-4 sm:px-6 py-2 rounded-full border-2 border-secondary bg-background-primary hover:border-secondary/50 transition-colors text-sm sm:text-base">
           <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs rounded-full bg-secondary text-tertiary whitespace-nowrap">
