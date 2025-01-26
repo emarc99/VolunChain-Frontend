@@ -16,8 +16,8 @@ VolunChain is a revolutionary blockchain-based platform designed to connect volu
 ## Technologies Used 🛠  
 
 ### **Frontend** 
-- **Tailwind CSS**:  Provides utility-first styling for fast, responsive, and consistent designs.
-- **React**: For a fast and reactive user interface.  
+- **TanStack Query**:A library for React that simplifies state management, caching, and syncing server-side data.
+- **Axios**:A promise-based HTTP client for making API requests in JavaScript, offering features like request/response interception and error handling.  
 - **Next.js**: Modern framework enhancing performance and SEO.
 - **Lucide**: A lightweight, customizable icon library that provides scalable, open-source icons for easy integration and styling in your app.  
 
@@ -56,8 +56,8 @@ npm install
 
 ## Maintainers 👥  
 - **Kevin Latino** 
-- **Joel Vargas** 
-- **Frankie Power**  
+- **Santiago Villarreal** 
+ 
 
 ---
 
