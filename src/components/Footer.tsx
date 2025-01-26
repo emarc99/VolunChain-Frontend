@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="text-white flex justify-center items-center py-16 mt-60">
-      <div className="container mx-auto px-4 md:px-6 lg:px-0">
+    <footer className="text-white flex justify-center mx-auto items-center py-16 mt-60">
+      <div className="container mx-auto px-4 md:px-6 lg:px-6 xl:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-12">
           {/* Brand Section */}
           <div className="md:col-span-2 lg:w-[550px] flex flex-col items-center md:items-start">
