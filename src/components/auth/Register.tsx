@@ -10,39 +10,6 @@ export default function Register() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [errors, setErrors] = useState<{ [key: string]: string }>({});
-
-    const validateForm = () => {
-        const newErrors: { [key: string]: string } = {};
-        
-        if (!firstName.trim()) newErrors.firstName = "First name is required";
-        if (!lastName.trim()) newErrors.lastName = "Last name is required";
-        if (!email.trim()) {
-            newErrors.email = "Email is required";
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            newErrors.email = "Email is invalid";
-        }
-        if (!password.trim()) {
-            newErrors.password = "Password is required";
-        } else if (password.length < 6) {
-            newErrors.password = "Password must be at least 6 characters";
-        }
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (validateForm()) {
-            try {
-                // TODO: Add your registration API call here
-                console.log("Form submitted:", { firstName, lastName, email, password });
-            } catch (error) {
-                console.error("Registration error:", error);
-            }
-        }
-    };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#0A061E] p-12">
@@ -87,7 +54,7 @@ export default function Register() {
                         </svg>
                     </Button>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="space-y-4">
                         <div>
                             <Input
                                 type="text"
@@ -96,7 +63,6 @@ export default function Register() {
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                                 label="First Name"
-                                error={errors.firstName}
                             />
                         </div>
                         <div>
@@ -107,9 +73,9 @@ export default function Register() {
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                                 label="Last Name"
-                                error={errors.lastName}
                             />
                         </div>
+
                         <div>
                             <Input
                                 type="email"
@@ -118,9 +84,9 @@ export default function Register() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 label="Email"
-                                error={errors.email}
                             />
                         </div>
+
                         <div>
                             <Input
                                 type="password"
@@ -129,14 +95,13 @@ export default function Register() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 label="Password"
-                                error={errors.password}
                             />
                         </div>
 
-                        <Button type="submit" variant="primary" className="w-full">
+                        <Button variant="primary" className="w-full">
                             Register
                         </Button>
-                    </form>
+                    </div>
                 </div>
 
                 <div className="relative hidden md:block bg-[#181934] rounded-tl-[30px] rounded-bl-[30px] flex flex-col justify-between">
