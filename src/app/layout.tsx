@@ -29,6 +29,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${fustat.variable}`}
     >
+      <head>
+        <link rel="icon" href="/logo.png" sizes="any" />
+      </head>
       <body className="flex flex-col justify-between min-h-screen text-text-light overflow-x-hidden">
         <main className="flex-grow">{children}</main>
         <Footer />
