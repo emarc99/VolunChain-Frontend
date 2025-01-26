@@ -18,6 +18,12 @@ const fustat = Fustat({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: "Volunchain",
+  description: "A platform revolutionizing volunteer work with blockchain technology, connecting volunteers and organizations with transparency and efficiency.",
+  keywords: "Volunteering, Blockchain, NFTs, Community, Charity",
+  authors: [{ name: "Volunchain Team" }],
+};
 
 export default function RootLayout({
   children,
