@@ -1,8 +1,6 @@
 "use client";
 
-import DownArrow from "@/icons/DownArrow";
-
-//import DownArrow from '../../../public/DownArrow.svg';
+import { ChevronDown } from "lucide-react";
 
 interface SelectProps {
   label?: string;
@@ -47,7 +45,7 @@ const Select = ({
           ))}
         </select>
         <span className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-          <DownArrow className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none !w-[5px]" />
+          <ChevronDown className="text-[#73B9EB]"  />
         </span>
 
       </div>
