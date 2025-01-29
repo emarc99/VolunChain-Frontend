@@ -1,4 +1,3 @@
-// components/animations/CountUp.tsx
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 
