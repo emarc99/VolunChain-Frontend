@@ -79,7 +79,7 @@ export default function Footer() {
                 <Image src="/twitter.png" alt="Logo" width={30} height={30} />
               </a>
               <a
-                href="https://github.com/volunchain"
+                href="https://t.me/volunchain"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors -mt-1"
