@@ -25,21 +25,21 @@ export default function SocialMediaSection() {
       icon: XLogo,
       name: "Twitter",
       description: "News and Updates",
-      href: "#",
+      href: "https://x.com/volunchain",
       iconClassName: "text-sky-400",
     },
     {
       icon: Send,
       name: "Telegram",
       description: "Discussions",
-      href: "#",
+      href: "https://t.me/volunchain",
       iconClassName: "text-red-400",
     },
     {
       icon: Github,
       name: "GitHub",
       description: "Resources",
-      href: "#",
+      href: "https://github.com/VolunChain",
       iconClassName: "text-sky-400",
     },
   ];
@@ -95,6 +95,7 @@ export default function SocialMediaSection() {
               className="flex"
             >
               <a
+                target="_blank"
                 href={platform.href}
                 className="flex-1 rounded-lg p-8 bg-[#0F112B] border border-[#1E1D4C] transition-transform duration-200"
               >
