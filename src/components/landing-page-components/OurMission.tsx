@@ -4,7 +4,7 @@ import { fadeInUp, staggerContainer, listItemReveal, scrollReveal } from "../../
 
 const OurMission = () => {
   return (
-    <motion.section
+    <motion.section id="mission"
       className="mt-16 py-16 px-6"
       initial="hidden"
       whileInView="visible"

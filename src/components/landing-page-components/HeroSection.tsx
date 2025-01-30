@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer, scaleUp } from "../../animations/variants";
 
 function HeroSection() {
   return (
-    <motion.div
+    <motion.div id="home"
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
