@@ -28,7 +28,7 @@ const parseValue = (value: string) => {
 
 const StatsSection = () => {
   return (
-    <motion.section
+    <motion.section id="users"
       className="text-white mt-[4rem] flex justify-center items-center py-16"
       initial="hidden"
       whileInView="visible"

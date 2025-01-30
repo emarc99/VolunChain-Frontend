@@ -45,7 +45,7 @@ export default function SocialMediaSection() {
   ];
 
   return (
-    <motion.section
+    <motion.section id="social-media"
       className="bg-[#0C0B1E] py-24 mt-[4rem]"
       initial="hidden"
       whileInView="visible"

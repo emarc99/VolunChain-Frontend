@@ -9,16 +9,15 @@ const LandingNavbar = () => {
   const toggleMenu = (): void => setIsMenuOpen((prevState) => !prevState);
 
   const menuItems = [
-    { path: "/", label: "Home" },
-    { path: "/mission", label: "Our Mission" },
-    { path: "/users", label: "Users" },
-    { path: "/social-media", label: "Social Media" },
+    { path: "#home", label: "Home" },
+    { path: "#mission", label: "Our Mission" },
+    { path: "#users", label: "Users" },
+    { path: "#social-media", label: "Social Media" },
   ];
 
   return (
     <nav className="w-full flex items-center justify-between p-6 mt-[-10px]">
       {" "}
-
       <Link href="/" className="text-white text-2xl font-semibold">
         <div className="w-40 lg:w-[226px] lg:h-[113px]">
           <img src="/logo.svg" className="w-full h-full" alt="logo" />
@@ -36,7 +35,23 @@ const LandingNavbar = () => {
       >
         <div className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-7">
           {menuItems.map((link) => (
-            <Link key={link.path} href={link.path}>
+            <Link
+              key={link.path}
+              href={link.path}
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                const targetId = link.path.replace("#", "");
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+                setIsMenuOpen(false);
+              }}
+            >
               <p className="text-white text-lg font-semibold">{link.label}</p>
             </Link>
           ))}
