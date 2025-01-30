@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -78,14 +79,13 @@ export default function Footer() {
               >
                 <Image src="/twitter.png" alt="Logo" width={30} height={30} />
               </a>
-              <a
-                href="https://t.me/volunchain"
+              <Link href="https://t.me/volunchain"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors -mt-1"
-              >
+                >
                 <Image src="/telegram.png" alt="Logo" width={34} height={34} />
-              </a>
+              </Link>
               <a
                 href="https://github.com/volunchain"
                 target="_blank"
