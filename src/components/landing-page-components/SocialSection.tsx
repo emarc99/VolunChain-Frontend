@@ -1,11 +1,11 @@
 import { Github, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { fadeInLeft, fadeInRight, stayCenter, scrollReveal, fadeInUp } from "@/animations/variants";
 
 function XLogo() {
   return (
-    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
-<svg
+    <svg
       viewBox="0 0 124 113"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -20,25 +20,6 @@ function XLogo() {
   );
 }
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 }
-  }
-};
-
-const scrollReveal = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } }
-};
-
 export default function SocialMediaSection() {
   const platforms = [
     {
@@ -46,22 +27,22 @@ export default function SocialMediaSection() {
       name: "Twitter",
       description: "News and Updates",
       href: "#",
-      iconClassName: "text-sky-400"
+      iconClassName: "text-sky-400",
     },
     {
       icon: Send,
       name: "Telegram",
       description: "Discussions",
       href: "#",
-      iconClassName: "text-red-400"
+      iconClassName: "text-red-400",
     },
     {
       icon: Github,
       name: "GitHub",
       description: "Resources",
       href: "#",
-      iconClassName: "text-sky-400"
-    }
+      iconClassName: "text-sky-400",
+    },
   ];
 
   return (
@@ -93,8 +74,8 @@ export default function SocialMediaSection() {
             className="text-gray-300 max-w-3xl text-lg md:text-xl leading-relaxed"
             variants={fadeInUp}
           >
-           Connect with us on social media and contribute to building a better ecosystem for volunteering. 
-           Stay updated, share your thoughts, and collaborate with our growing community!
+            Connect with us on social media and contribute to building a better ecosystem for volunteering.
+            Stay updated, share your thoughts, and collaborate with our growing community!
           </motion.p>
         </motion.div>
 
@@ -103,7 +84,13 @@ export default function SocialMediaSection() {
             <motion.div
               key={platform.name}
               custom={index}
-              variants={staggerContainer}
+              variants={
+                index === 0
+                  ? fadeInLeft(3.5) 
+                  : index === platforms.length - 1
+                  ? fadeInRight(3.5) 
+                  : stayCenter
+              }
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               className="flex"

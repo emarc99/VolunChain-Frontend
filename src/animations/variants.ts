@@ -92,3 +92,49 @@ export const scaleUp: Variants = {
   }
 };
 
+export const fadeInLeft = (index: number): Variants => ({
+  hidden: {
+    opacity: 0,
+    x: -150,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: index * 0.3,
+      duration: 1.5,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+});
+
+export const fadeInRight = (index: number): Variants => ({
+  hidden: {
+    opacity: 0,
+    x: 150,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: index * 0.3,
+      duration: 1.5,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+});
+
+export const stayCenter = {
+  hidden: {
+    opacity: 0,
+    x: 0,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.5,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};

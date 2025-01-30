@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Button from "../ui/Button";
-import { HamIcon, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const LandingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -18,7 +18,7 @@ const LandingNavbar = () => {
   return (
     <nav className="w-full flex items-center justify-between p-6 mt-[-10px]">
       {" "}
-      {/* Ajusté el margen superior aquí */}
+
       <Link href="/" className="text-white text-2xl font-semibold">
         <div className="w-40 lg:w-[226px] lg:h-[113px]">
           <img src="/logo.svg" className="w-full h-full" alt="logo" />
