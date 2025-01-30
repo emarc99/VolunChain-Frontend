@@ -51,7 +51,7 @@ const OpportunitiesHeader = () => {
  
 
   return (
-    <div className="w-full min-h-screen h-fit px-[10px] md:px-[30px] py-[25px] md:py-[80px] bg-transparent max-w-7xl mx-auto">
+    <div className="w-full px-[10px] md:px-[30px] pt-[25px] md:pt-[40px] bg-transparent max-w-7xl mx-auto">
       <div className="w-full h-fit lg:h-[328px] rounded-[37px] bg-[#0F112B] flex flex-col lg:flex-row py-[20px] lg:py-[30px] px-[30px] lg:px-[45px] gap-[10px]">
         <div className="flex flex-col items-start justify-center w-full lg:w-1/2 h-fit gap-[25px] lg:gap-[50px]">
           <h1 className="text-white text-[28px] sm:text-[32px] lg:text-[38px] font-[800]">
@@ -83,7 +83,7 @@ const OpportunitiesHeader = () => {
         </div>
       </div>
 
-      <div className="my-12 relative flex gap-8 items-center w-full mx-auto">
+      <div className="my-6 relative flex gap-8 items-center w-full mx-auto">
         <ChevronLeftCircle
           onClick={() => handleSlide("left")}
           strokeWidth={1}
