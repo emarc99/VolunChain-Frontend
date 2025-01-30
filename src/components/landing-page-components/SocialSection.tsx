@@ -1,6 +1,5 @@
 import { Github, Send } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { fadeInLeft, fadeInRight, stayCenter, scrollReveal, fadeInUp } from "@/animations/variants";
 
 function XLogo() {
@@ -47,7 +46,7 @@ export default function SocialMediaSection() {
 
   return (
     <motion.section
-      className="bg-[#0C0B1E] py-24"
+      className="bg-[#0C0B1E] py-24 mt-[4rem]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -95,7 +94,7 @@ export default function SocialMediaSection() {
               whileHover={{ scale: 1.05 }}
               className="flex"
             >
-              <Link
+              <a
                 href={platform.href}
                 className="flex-1 rounded-lg p-8 bg-[#0F112B] border border-[#1E1D4C] transition-transform duration-200"
               >
@@ -115,7 +114,7 @@ export default function SocialMediaSection() {
                     {platform.description}
                   </p>
                 </div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>

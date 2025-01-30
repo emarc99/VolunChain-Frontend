@@ -26,10 +26,10 @@ const parseValue = (value: string) => {
   return parseInt(value, 10);
 };
 
-const StartSection = () => {
+const StatsSection = () => {
   return (
     <motion.section
-      className="text-white flex justify-center items-center py-16"
+      className="text-white mt-[4rem] flex justify-center items-center py-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -84,4 +84,4 @@ const StartSection = () => {
   );
 };
 
-export default StartSection;
+export default StatsSection;

@@ -4,7 +4,7 @@ import { fadeInUp, staggerContainer, listItemReveal, scrollReveal } from "../../
 
 const OurMission = () => {
   return (
-    <motion.section 
+    <motion.section
       className="mt-16 py-16 px-6"
       initial="hidden"
       whileInView="visible"
@@ -12,17 +12,17 @@ const OurMission = () => {
       variants={scrollReveal}
     >
       <div className="container mx-auto text-center max-w-5xl">
-        <motion.div 
+        <motion.div
           className="mb-8"
           variants={fadeInUp}
         >
-          <motion.h2 
+          <motion.h2
             className="text-2xl text-[#73B9EB] mb-2"
             variants={fadeInUp}
           >
             Our Mission
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             className="text-3xl md:text-5xl font-bold text-white"
             variants={fadeInUp}
           >
@@ -30,20 +30,20 @@ const OurMission = () => {
           </motion.h3>
         </motion.div>
 
-        <motion.p 
+        <motion.p
           className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"
           variants={fadeInUp}
         >
-          By using blockchain's transparency and efficiency, we connect volunteers 
-          with organizations, fostering collaboration and impactful experiences 
+          By using blockchain's transparency and efficiency, we connect volunteers
+          with organizations, fostering collaboration and impactful experiences
           in a secure and scalable ecosystem.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex flex-col md:flex-row items-center justify-center gap-8 bg-[#0F112B] rounded-[30px] p-8"
           variants={staggerContainer}
         >
-          <motion.div 
+          <motion.div
             className="relative overflow-hidden w-full md:w-1/2 max-w-md"
             variants={fadeInUp}
           >
@@ -56,7 +56,7 @@ const OurMission = () => {
             />
           </motion.div>
 
-          <motion.ul 
+          <motion.ul
             className="text-left text-gray-300 space-y-12 md:w-1/2"
             variants={staggerContainer}
           >
@@ -71,7 +71,7 @@ const OurMission = () => {
                 variants={listItemReveal}
                 className="flex items-start gap-4"
               >
-                <motion.div 
+                <motion.div
                   className="bg-[#73B9EB] p-2 rounded-full"
                   whileHover={{ scale: 1.1 }}
                 >
