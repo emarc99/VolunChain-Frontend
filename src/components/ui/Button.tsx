@@ -3,42 +3,39 @@ import clsx from "clsx";
 interface ButtonProps {
   children: React.ReactNode | string;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "outline" | "blue";
+  variant: "primary" | "secondary" | "tertiary" | "outline";
   type?: "button" | "submit" | "reset";
   textColor?: "white" | "black" | "primary" | "secondary";
-  rounded?: "md" | "full";
   className?: string 
 }
 
 const Button = ({
   children,
   onClick,
-  variant = "primary",
+  variant,
   textColor = "white",
   type = "button",
-  rounded = "md",
   className
 }: ButtonProps) => {
   return (
     <button
       type={type}
-      className={clsx(
-        "cursor-pointer py-3 px-6 w-auto font-semibold transition-colors", 
-        {
-          "text-white": textColor === "white",
-          "text-black": textColor === "black",
-          "text-primary": textColor === "primary",
-          "text-secondary": textColor === "secondary",
+      className={clsx("cursor-pointer py-3 px-6 rounded-full w-auto font-semibold border-2", className, {
+        
+        "text-white": textColor === "white",
+        "text-black": textColor === "black",
+        "text-primary": textColor === "primary",
+        "text-secondary": textColor === "secondary",
 
-          "bg-primary border-primary": variant === "primary",
-          "border-2 border-secondary": variant === "secondary",
-          "w-full flex items-center justify-center gap-6 bg-transparent border border-[#73b9eb] hover:bg-[#73b9eb]/10": variant === "outline",
-          "bg-[#2D9CDB] hover:bg-[#2D9CDB]/90": variant === "blue",
-          "rounded-md": rounded === "md" && variant !== "blue",
-          "rounded-full": rounded === "full",
-        },
-        className
-      )}
+        "bg-primary ":
+          variant === "primary",
+        "border-primary": variant === "primary",
+        "border-2 border-secondary":
+          variant === "secondary",
+        "border-2 border-link bg-link":
+          variant === "tertiary",
+        "w-full flex items-center justify-center gap-6 bg-transparent border border-[#73b9eb] hover:bg-[#73b9eb]/10 transition-colors": variant === "outline",
+      })}
       onClick={onClick}
     >
       {children}

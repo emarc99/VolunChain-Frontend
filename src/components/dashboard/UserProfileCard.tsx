@@ -68,9 +68,8 @@ export default function UserProfileCard({
       </div>
 
       <div className="p-4">
-        <Button 
-          variant="blue" 
-          rounded="full" 
+        <Button        
+          variant="tertiary"
           className="w-full"
         >
           See Profile
