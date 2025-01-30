@@ -1,48 +1,42 @@
-import Image from "next/image"
-import Link from "next/link"
-import Card from "../ui/Card"
-import CardHeader from "../ui/CardHeader"
+import EntityList from "@/components/ui/EntityList"
 
 const suggestions = [
   {
     image: "/placeholder.svg?height=40&width=40",
-    name: "DripFisshes",
-    description: "Ocean cleaning services",
+    title: "DripFishes",
+    subtitle: "Ocean cleaning services",
+    action: {
+      type: 'link' as const,
+      label: "Check Out"
+    }
   },
   {
     image: "/placeholder.svg?height=40&width=40",
-    name: "Black Bear Association",
-    description: "Environmental Cleanup",
+    title: "Black Bear Association",
+    subtitle: "Environmental Cleanup",
+    action: {
+      type: 'link' as const,
+      label: "Check Out"
+    }
+  },
+  {
+    image: "/placeholder.svg?height=40&width=40",
+    title: "Green Earth Initiative",
+    subtitle: "Sustainable living advocacy",
+    action: {
+      type: 'link' as const,
+      label: "Check Out"
+    }
   },
 ]
 
 export default function SuggestionsCard() {
   return (
-    <Card className="w-full p-8">
-      <CardHeader 
-        title="Suggested for you" 
-        action={{ label: "See All" }}
-      />
-      <div className="space-y-8">
-        {suggestions.map((suggestion, i) => (
-          <div key={i} className="flex items-center gap-3">
-            <Image
-              src={suggestion.image}
-              alt=""
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <div className="flex-1">
-              <p className="font-medium">{suggestion.name}</p>
-              <p className="text-xs text-gray-400">{suggestion.description}</p>
-            </div>
-            <Link href="#" className="text-link text-sm hover:underline">
-              Check Out
-            </Link>
-          </div>
-        ))}
-      </div>
-    </Card>
+    <EntityList
+      title="Suggested for you"
+      items={suggestions}
+      action={{ label: "See All" }}
+      className="w-full p-8"
+    />
   )
 } 

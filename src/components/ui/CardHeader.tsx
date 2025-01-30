@@ -11,7 +11,7 @@ interface CardHeaderProps {
 export default function CardHeader({ title, action }: CardHeaderProps) {
   return (
     <div className="mb-8 flex items-center justify-between">
-      <h3 className="text-sm font-medium">{title}</h3>
+      <h3 className="text-md font-medium">{title}</h3>
       {action && (
         <Link 
           href={action.href || '#'} 
