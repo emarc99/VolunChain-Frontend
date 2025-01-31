@@ -13,7 +13,7 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search"
-        className="h-12 w-full rounded-lg bg-[#0A0B1A] pl-5 pr-14 text-lg text-white placeholder-gray-400 border border-gray-800 focus:outline-none focus:border-[#7DD3FC] focus:ring-1 focus:ring-[#7DD3FC]"
+        className="h-12 w-full rounded-lg bg-transparent pl-5 pr-14 text-lg text-white placeholder-gray-400 border border-gray-800 focus:outline-none focus:border-[#7DD3FC] focus:ring-1 focus:ring-[#7DD3FC]"
       />
       <div className="absolute right-[6px] top-[6px]">
         <button

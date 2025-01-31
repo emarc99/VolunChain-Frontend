@@ -1,8 +1,11 @@
+"use client"
+
 import { Home, Bell, Users, Medal } from "lucide-react"
 import Link from "next/link"
 import clsx from "clsx"
 import Image from "next/image"
 import SearchBar from "@/components/ui/SearchBar"
+import { useEffect, useState } from "react"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home, isActive: true },
@@ -12,10 +15,35 @@ const navItems = [
 ]
 
 export default function DashboardNav() {
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY
+      
+      // Show/hide based on scroll direction
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 10)
+      
+      // Add transparency when scrolled
+      setIsScrolled(currentScrollY > 10)
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', controlNavbar)
+    return () => window.removeEventListener('scroll', controlNavbar)
+  }, [lastScrollY])
+
   return (
-    <div className=" w-full bg-tertiary/80 backdrop-blur-sm mt-[1.5rem]">
+    <div className={clsx(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+      isVisible ? "translate-y-0" : "-translate-y-full",
+      isScrolled ? "bg-[#0a0b1a]/95 backdrop-blur-sm" : "bg-[#0a0b1a]"
+    )}>
       <nav className="container mx-auto">
-        <div className="flex h-16 items-center justify-between px-4">
+        <div className="flex h-20 items-center justify-between px-4">
           <div className="flex items-center gap-2">
             <div className="w-[4rem]"> 
               <Link href="/" className="flex items-center gap-2">

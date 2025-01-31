@@ -30,7 +30,7 @@ export default function FeedPost({ organization, content, engagement, tags }: Fe
     <Card className="rounded-xl bg-gray-800/20 p-8">
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="h-16 w-16 md:h-20 md:w-20 overflow-hidden rounded-full">
+          <div className="h-16 w-16 md:h-16 md:w-16 overflow-hidden rounded-full">
             <Image
               src={organization.avatar || "/placeholders/profile-image.png"}
               alt={organization.name}
@@ -64,7 +64,7 @@ export default function FeedPost({ organization, content, engagement, tags }: Fe
         </div>
       )}
 
-      <div className="mt-4 flex items-center justify-between">
+      <div className="mt-4 flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-4">
           <button type="button" className="flex items-center gap-2 text-sm text-gray-400 hover:text-red-500">
             <Heart className="h-5 w-5" />
@@ -78,9 +78,12 @@ export default function FeedPost({ organization, content, engagement, tags }: Fe
           )}
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 md:gap-2">
           {tags.map((tag) => (
-            <span key={tag.label} className={`rounded-full ${tag.color} px-3 py-1 text-xs font-medium`}>
+            <span 
+              key={tag.label} 
+              className={`rounded-full ${tag.color} px-2 py-0.5 md:px-3 md:py-1 text-[10px] md:text-xs font-medium whitespace-nowrap`}
+            >
               {tag.label}
             </span>
           ))}
