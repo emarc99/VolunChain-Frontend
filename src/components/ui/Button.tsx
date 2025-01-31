@@ -3,7 +3,7 @@ import clsx from "clsx";
 interface ButtonProps {
   children: React.ReactNode | string;
   onClick?: () => void;
-  variant: "primary" | "secondary" | "outline";
+  variant: "primary" | "secondary" | "tertiary" | "outline";
   type?: "button" | "submit" | "reset";
   textColor?: "white" | "black" | "primary" | "secondary";
   className?: string 
@@ -32,6 +32,8 @@ const Button = ({
         "border-primary": variant === "primary",
         "border-2 border-secondary":
           variant === "secondary",
+        "border-2 border-link bg-link":
+          variant === "tertiary",
         "w-full flex items-center justify-center gap-6 bg-transparent border border-[#73b9eb] hover:bg-[#73b9eb]/10 transition-colors": variant === "outline",
       })}
       onClick={onClick}

@@ -16,6 +16,7 @@ export default {
         secondary: "var(--secondary)",
         blue: "var(--blue)",
         grey: "var(--grey)",
+        link: "var(--link)",
       },
       fontFamily: {
         fustat: ['var(--font-fustat)', 'sans-serif'],
