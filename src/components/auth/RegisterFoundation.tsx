@@ -3,16 +3,10 @@ import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import Select from "../ui/Select";
 import TextArea from "../ui/TextArea";
 
 export default function RegisterFoundation() {
-    const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
-    const [category, setCategory] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#0A061E] p-12">
@@ -63,8 +57,6 @@ export default function RegisterFoundation() {
                                 type="text"
                                 placeholder="Your name here"
                                 name="name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
                                 label="Name"
                             />
                         </div>
@@ -72,8 +64,6 @@ export default function RegisterFoundation() {
                             <TextArea
                                 placeholder="Your foundation description here"
                                 name="description"
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
                                 label="Description"
                             />
                         </div>
@@ -81,8 +71,6 @@ export default function RegisterFoundation() {
                         <div>
                             <Select
                                 name="category"
-                                value={category}
-                                onChange={(e) => setCategory(e.target.value)}
                                 label="Category"
                                 placeholder="Select the category of your foundation"
                                 options={[
@@ -107,8 +95,6 @@ export default function RegisterFoundation() {
                                 type="password"
                                 placeholder="Your password here"
                                 name="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
                                 label="Password"
                             />
                         </div>
@@ -118,8 +104,6 @@ export default function RegisterFoundation() {
                                 type="email"
                                 placeholder="Your email here"
                                 name="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
                                 label="Email"
                             />
                         </div>
