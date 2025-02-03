@@ -10,7 +10,6 @@ module.exports = createJestConfig({
   transformIgnorePatterns: [
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
-     '<rootDir>/node_modules/'
   ],
   preset: 'ts-jest',
 });
